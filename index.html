@@ -3,57 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Tours</title>
+    <title>Sri Sharada Tours And Travels</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Just adding some basic styles here for the sake of the example */
-        .package-list {
-            display: flex;
-            overflow: hidden;
-            width: 100%; /* Ensure it takes the full width */
-            transition: scroll 0.5s ease;
-        }
-        .package {
-            min-width: 300px; /* Adjust as per your requirement */
-            margin-right: 20px; /* Space between packages */
-        }
-        .package img {
-            width: 100%;
-            height: auto;
-        }
-        .package-scroll-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-        .scroll-btn {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            z-index: 2;
-        }
-        .scroll-btn.left {
-            left: 10px;
-            transform: translateY(-50%);
-        }
-        .scroll-btn.right {
-            right: 10px;
-            transform: translateY(-50%);
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1>Explore Tours</h1>
-        </div>
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="Sri Sharada Tours And Travels Logo" class="site-logo" />
+    </div>
+    <div>
         <nav>
-            <ul>
+            <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="trips.html">Trips</a></li>
@@ -61,134 +21,115 @@
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
-    <main>
-        <section class="intro">
-            <h2>Welcome to Explore Tours!</h2>
-            <p>Your gateway to unforgettable travel experiences.</p>
-        </section>
+<main>
+    <section class="intro">
+        <h2>Welcome to Explore Tours!</h2>
+        <p>Your gateway to unforgettable travel experiences.</p>
+    </section>
 
-        <section class="reviews">
-            <h2>What Our Clients Say</h2>
-            <div class="review">
-                <p>"The trip to the Swiss Alps was amazing! Highly recommend it!" - Sarah L.</p>
-            </div>
-            <div class="review">
-                <p>"Great service and beautiful destinations. I’ll be back soon!" - James T.</p>
-            </div>
-        </section>
+    <section class="reviews">
+        <h2>What Our Clients Say</h2>
+        <div class="review">
+            <p>"The trip to the Swiss Alps was amazing! Highly recommend it!" - Sarah L.</p>
+        </div>
+        <div class="review">
+            <p>"Great service and beautiful destinations. I’ll be back soon!" - James T.</p>
+        </div>
+    </section>
 
-        <section class="packages">
-            <h2>Our Packages</h2>
+    <section class="packages">
+        <h2>Our Packages</h2>
 
-            <!-- Scrollable Package Container -->
-            <div class="package-scroll-container">
-                <button class="scroll-btn left" onclick="scrollPackages(-1)">&#60;</button>
-                <div class="package-list">
-                    <!-- Package 1 to 9 -->
-                    <div class="package">
-                        <img src="https://hillingdonlibraries.wordpress.com/wp-content/uploads/2020/07/europe-1000x600-1.jpg" alt="Europe Tour" class="package-img">
-                        <h3>Luxury Europe Tour</h3>
-                        <p>Visit the best cities in Europe. 10-day tour package.</p>
-                    </div>
-                    <div class="package">
-                        <img src="https://media.istockphoto.com/id/675172642/photo/pura-ulun-danu-bratan-temple-in-bali.jpg?s=612x612&w=0&k=20&c=_MPdmDviIyhldqhf7t6s63C-bZbTGfNHMlJP9SIa8Y0=" alt="Bali Getaway" class="package-img">
-                        <h3>Exotic Bali Getaway</h3>
-                        <p>Relax and explore the paradise island of Bali. 7-day package.</p>
-                    </div>
-                    <div class="package">
-                        <img src="https://www.hobokengirl.com/wp-content/uploads/2018/04/paris-france-getaway_5158-768x767.jpg" alt="Paris Tour" class="package-img">
-                        <h3>Paris Getaway</h3>
-                        <p>Explore the romantic city of Paris. 5-day tour package.</p>
-                    </div>
-                    <div class="package">
-                        <img src="https://media.timeout.com/images/100736235/750/562/image.jpg" alt="London Tour" class="package-img">
-                        <h3>London Adventure</h3>
-                        <p>Explore the sights and history of London. 7-day tour package.</p>
-                    </div>
-                    <div class="package">
-                        <img src="https://www.travelalaska.com/sites/default/files/2021-12/ThingsToDo_Adventure_Hero_%28ATIA%2C%20Michael%20DeYoung%29.jpg" alt="Alaska Adventure" class="package-img">
-                        <h3>Alaska Adventure</h3>
-                        <p>Experience the wilderness and wildlife of Alaska. 10-day package.</p>
-                    </div>
-                    <div class="package">
-                        <img src="https://res.klook.com/image/upload/q_85/c_fill,w_563/activities/zid9kr4d5bvprk8fdtme.jpg" alt="Tokyo Tour" class="package-img">
-                        <h3>Tokyo Tour</h3>
-                        <p>Experience the culture and technology of Tokyo. 6-day tour package.</p>
-                    </div>
-					                    <div class="package">
-                        <img src="https://www.travelalaska.com/sites/default/files/2021-12/ThingsToDo_Adventure_Hero_%28ATIA%2C%20Michael%20DeYoung%29.jpg" alt="Alaska Adventure" class="package-img">
-                        <h3>Alaska Adventure2</h3>
-                        <p>Experience the wilderness and wildlife of Alaska. 10-day package.</p>
-                    </div>
-                    <div class="package">
-                        <img src="https://res.klook.com/image/upload/q_85/c_fill,w_563/activities/zid9kr4d5bvprk8fdtme.jpg" alt="Tokyo Tour" class="package-img">
-                        <h3>Tokyo Tour2</h3>
-                        <p>Experience the culture and technology of Tokyo. 6-day tour package.</p>
-                    </div>
-					                    <div class="package">
-                        <img src="https://www.travelalaska.com/sites/default/files/2021-12/ThingsToDo_Adventure_Hero_%28ATIA%2C%20Michael%20DeYoung%29.jpg" alt="Alaska Adventure" class="package-img">
-                        <h3>Alaska Adventure3</h3>
-                        <p>Experience the wilderness and wildlife of Alaska. 10-day package.</p>
-                    </div>
-                    <div class="package">
-                        <img src="https://res.klook.com/image/upload/q_85/c_fill,w_563/activities/zid9kr4d5bvprk8fdtme.jpg" alt="Tokyo Tour" class="package-img">
-                        <h3>Tokyo Tour3</h3>
-                        <p>Experience the culture and technology of Tokyo. 6-day tour package.</p>
-                    </div>
+        <!-- Scrollable Package Container -->
+        <div class="package-scroll-container">
+            <div class="package-list">
+                <!-- Package 1 to 9 -->
+                <div class="package">
+                    <img src="https://hillingdonlibraries.wordpress.com/wp-content/uploads/2020/07/europe-1000x600-1.jpg" alt="Europe Tour" class="package-img">
+                    <h3>Luxury Europe Tour</h3>
+                    <p>Visit the best cities in Europe. 10-day tour package.</p>
                 </div>
-                <button class="scroll-btn right" onclick="scrollPackages(1)">&#62;</button>
+                <div class="package">
+                    <img src="https://media.istockphoto.com/id/675172642/photo/pura-ulun-danu-bratan-temple-in-bali.jpg?s=612x612&w=0&k=20&c=_MPdmDviIyhldqhf7t6s63C-bZbTGfNHMlJP9SIa8Y0=" alt="Bali Getaway" class="package-img">
+                    <h3>Exotic Bali Getaway</h3>
+                    <p>Relax and explore the paradise island of Bali. 7-day package.</p>
+                </div>
+                <div class="package">
+                    <img src="https://www.hobokengirl.com/wp-content/uploads/2018/04/paris-france-getaway_5158-768x767.jpg" alt="Paris Tour" class="package-img">
+                    <h3>Paris Getaway</h3>
+                    <p>Explore the romantic city of Paris. 5-day tour package.</p>
+                </div>
+                <div class="package">
+                    <img src="https://media.timeout.com/images/100736235/750/562/image.jpg" alt="London Tour" class="package-img">
+                    <h3>London Adventure</h3>
+                    <p>Explore the sights and history of London. 7-day tour package.</p>
+                </div>
+                <div class="package">
+                    <img src="https://www.travelalaska.com/sites/default/files/2021-12/ThingsToDo_Adventure_Hero_%28ATIA%2C%20Michael%20DeYoung%29.jpg" alt="Alaska Adventure" class="package-img">
+                    <h3>Alaska Adventure</h3>
+                    <p>Experience the wilderness and wildlife of Alaska. 10-day package.</p>
+                </div>
+                <div class="package">
+                    <img src="https://res.klook.com/image/upload/q_85/c_fill,w_563/activities/zid9kr4d5bvprk8fdtme.jpg" alt="Tokyo Tour" class="package-img">
+                    <h3>Tokyo Tour</h3>
+                    <p>Experience the culture and technology of Tokyo. 6-day tour package.</p>
+                </div>
+				<div class="package">
+                    <img src="https://hillingdonlibraries.wordpress.com/wp-content/uploads/2020/07/europe-1000x600-1.jpg" alt="Europe Tour" class="package-img">
+                    <h3>Luxury Europe Tour2</h3>
+                    <p>Visit the best cities in Europe. 10-day tour package.</p>
+                </div>
+                <div class="package">
+                    <img src="https://media.istockphoto.com/id/675172642/photo/pura-ulun-danu-bratan-temple-in-bali.jpg?s=612x612&w=0&k=20&c=_MPdmDviIyhldqhf7t6s63C-bZbTGfNHMlJP9SIa8Y0=" alt="Bali Getaway" class="package-img">
+                    <h3>Exotic Bali Getaway2</h3>
+                    <p>Relax and explore the paradise island of Bali. 7-day package.</p>
+                </div>
+                <div class="package">
+                    <img src="https://www.hobokengirl.com/wp-content/uploads/2018/04/paris-france-getaway_5158-768x767.jpg" alt="Paris Tour" class="package-img">
+                    <h3>Paris Getaway2</h3>
+                    <p>Explore the romantic city of Paris. 5-day tour package.</p>
+                </div>
+                <div class="package">
+                    <img src="https://media.timeout.com/images/100736235/750/562/image.jpg" alt="London Tour" class="package-img">
+                    <h3>London Adventure2</h3>
+                    <p>Explore the sights and history of London. 7-day tour package.</p>
+                </div>
+                <div class="package">
+                    <img src="https://www.travelalaska.com/sites/default/files/2021-12/ThingsToDo_Adventure_Hero_%28ATIA%2C%20Michael%20DeYoung%29.jpg" alt="Alaska Adventure" class="package-img">
+                    <h3>Alaska Adventure2</h3>
+                    <p>Experience the wilderness and wildlife of Alaska. 10-day package.</p>
+                </div>
+                <div class="package">
+                    <img src="https://res.klook.com/image/upload/q_85/c_fill,w_563/activities/zid9kr4d5bvprk8fdtme.jpg" alt="Tokyo Tour" class="package-img">
+                    <h3>Tokyo Tour2</h3>
+                    <p>Experience the culture and technology of Tokyo. 6-day tour package.</p>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+</main>
 
-    <footer>
+<footer>
+    <div class="footer-container">
         <p>&copy; 2025 Explore Tours. All Rights Reserved.</p>
-    </footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/YourFacebookPage" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/YourInstagramPage" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
+            </a>
+        </div>
+    </div>
+</footer>
 
-    <a href="https://wa.me/+918008076288" target="_blank" class="whatsapp-btn">
-        <img src="https://png.pngtree.com/png-clipart/20221019/original/pngtree-whatsapp-icon-png-image_8704827.png" alt="WhatsApp" class="whatsapp-icon">
-    </a>
+<a href="https://wa.me/+918008076288" target="_blank" class="whatsapp-btn">
+    <img src="https://png.pngtree.com/png-clipart/20221019/original/pngtree-whatsapp-icon-png-image_8704827.png" alt="WhatsApp" class="whatsapp-icon">
+</a>
 
-    <script>
-	function scrollPackages(direction) {
-    const packageList = document.querySelector('.package-list');
-    const packageWidth = document.querySelector('.package').offsetWidth + 20; // Including margin
-    const totalPackages = document.querySelectorAll('.package').length;
-    const containerWidth = document.querySelector('.package-scroll-container').offsetWidth;
-    
-    // Calculate max scroll position: the total width of the packages minus the container width
-    const maxScroll = (totalPackages * packageWidth) - containerWidth;
-    const currentScroll = packageList.scrollLeft;
-    
-    // Calculate how far to scroll based on the direction
-    let newScroll = currentScroll + (direction * packageWidth * 3); // Scroll 3 packages at a time
-
-    // Ensure the new scroll position is within bounds
-    if (newScroll < 0) {
-        newScroll = 0;
-    } else if (newScroll > maxScroll) {
-        newScroll = maxScroll;
-    }
-
-    // Apply the new scroll position
-    packageList.scrollLeft = newScroll;
-    
-    // Special handling for the last package to ensure it's fully visible
-    if (newScroll === maxScroll) {
-        const lastPackage = document.querySelectorAll('.package')[totalPackages - 1];
-        const lastPackageWidth = lastPackage.offsetWidth + 20; // Include margin
-        const remainingSpace = containerWidth - lastPackageWidth;
-        
-        // If remaining space is less than 0, adjust scroll to fit the last package
-        if (remainingSpace < 0) {
-            packageList.scrollLeft = maxScroll - remainingSpace;
-        }
-    }
-}
-
-
-    </script>
+<script src="script.js"></script>
 </body>
 </html>
