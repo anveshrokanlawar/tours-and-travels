@@ -9,53 +9,75 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 0px 0px;
-}
+/* Banner Menu */
+        .banner-menu {
+			padding-right: 50px;
+            list-style: none;
+            margin: 0;
+            display: flex;
+            gap: 30px; /* Space between menu items */
+        }
 
-header .logo-container {
-    display: inline-block;
-    margin-left: 20px;
-}
+        .banner-menu li {
+            position: relative;
+        }
 
-header .site-logo {
-    height: 40px;
-}
+        .banner-menu li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: color 0.3s, background-color 0.3s;
+        }
 
-nav {
-    display: inline-block;
-    float: right;
-    margin-right: 20px;
-}
+        .banner-menu li a:hover {
+            color: #f0a500;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
 
-.nav-menu {
-    list-style: none;
-    margin: -25px 14px;
-    padding: 0;
-}
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 10px;
+            list-style: none;
+            top: 100%;
+            left: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            border-radius: 5px;
+        }
 
-.nav-menu li {
-    display: inline;
-    margin-left: 20px;
-}
+        .dropdown li {
+            margin: 5px 0;
+        }
 
-.nav-menu li a {
-    color: white;
-    text-decoration: none;
-}
+        .dropdown li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            display: block;
+        }
 
-.main {
-    margin-top: 20px;
-    padding: 20px;
-}
+        .dropdown li a:hover {
+            background-color: #f0a500;
+            border-radius: 5px;
+        }
+
+        .banner-menu li:hover .dropdown {
+            display: block;
+        }
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 0px 0;
+	position: static;
+	bottom: 0;
+	width: 100%;
 }
 
 /* Package Section */
@@ -193,3 +215,111 @@ footer {
         width: 150px;  /* Smaller packages on very small screens */
     }
 }
+
+.contact-details {
+    margin: 20px 0;
+}
+
+.enquiry-form {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.enquiry-form button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.enquiry-form button:hover {
+    background-color: #555;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;  /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-message {
+    font-size: 16px;
+    color: #333;
+}
+
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333; /* Banner background color */
+            color: white;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .site-logo {
+            max-height: 50px; /* Adjust logo height */
+            width: auto;
+        }
+
+        /* Add padding to the main section to avoid overlapping with the fixed header */
+        main {
+            padding-top: 100px;
+        }
+
+

@@ -7,42 +7,88 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
     <header>
-        <div class="logo">
-            <h1>Explore Tours</h1>
+        <div class="logo-container">
+            <img src="logo.png" alt="Sri Sharada Tours And Travels Logo" class="site-logo" />
         </div>
-        <nav>
-            <ul>
+        <div class="banner">
+            <ul class="banner-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
+                <li>
+                    <a href="#">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="domestic.html">Domestic Tours</a></li>
+                        <li><a href="international.html">International Tours</a></li>
+                    </ul>
+                </li>
                 <li><a href="trips.html">Trips</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
-
     <main>
-        <section class="contact-form">
-            <h2>Get in Touch</h2>
-            <form action="submit_form.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-details">
+                <p>Mobile Number: 8008076288 / 9441374799</p>
+                <p>Email ID: <a href="mailto:surajrao90@gmail.com">surajrao90@gmail.com</a></p>
+                <p>Office Address:</p>
+                <p>C/O: R. Pramod Rao<br>
+                   6-155/2, Ram Nagar, Sri Nagara Colony<br>
+                   Adilabad, Pin: 504001</p>
+            </div>
+            <div class="enquiry-form">
+                <h3>Enquiry Form</h3>
+                <form>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Explore Tours. All Rights Reserved.</p>
-        <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn">Contact Us on WhatsApp</a>
     </footer>
+
+    <footer>
+        <div class="footer-container">
+            &copy; 2025 Sri Sharada Tours & Travels. All Rights Reserved.
+            <div class="social-links">
+                <a href="https://www.facebook.com/YourFacebookPage" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/YourInstagramPage" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <a href="https://wa.me/+918008076288" target="_blank" class="whatsapp-btn">
+        <img src="https://png.pngtree.com/png-clipart/20221019/original/pngtree-whatsapp-icon-png-image_8704827.png" alt="WhatsApp" class="whatsapp-icon">
+    </a>
+
+    <!-- Thank You Modal -->
+<div id="thank-you-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('thank-you-modal')">&times;</span>
+        <p class="modal-message"></p>
+    </div>
+</div>
+
+<!-- Error Modal -->
+<div id="error-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('error-modal')">&times;</span>
+        <p class="modal-message"></p>
+    </div>
+</div>
+
 </body>
 </html>
