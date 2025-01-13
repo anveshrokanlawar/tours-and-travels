@@ -27,7 +27,7 @@ function scrollPackages(direction) {
         form.addEventListener('submit', function (event) {
             event.preventDefault();  // Prevent the default form submission
 
-            emailjs.sendForm('xmd5zzc', 'pjlb1y6', form)  // Replace with actual service ID and template ID
+            emailjs.sendForm('py4ui2q', 'pjlb1y6', form)  // Replace with actual service ID and template ID
                 .then(function(response) {
                     showThankYouModal();  // Show the thank you modal on successful submission
                     form.reset();
@@ -95,7 +95,7 @@ function scrollPackages(direction) {
         form.addEventListener('submit', function (event) {
             event.preventDefault();  // Prevent the default form submission
 
-            emailjs.sendForm('xmd5zzc', '014k9xn', form)  // Replace with actual service ID and template ID
+            emailjs.sendForm('py4ui2q', '014k9xn', form)  // Replace with actual service ID and template ID
                 .then(function(response) {
                     showThankYouModal();  // Show the thank you modal on successful submission
                     form.reset();
